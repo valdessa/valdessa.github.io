@@ -1104,3 +1104,33 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/*--------------------------------------------------------------
+# Sebas
+--------------------------------------------------------------*/
+
+
+.badge {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+  /*margin-left: 5px; /* Ajusta este valor según tu preferencia */
+}
+/*
+opacity: 1;
+left: 0;
+right: 0;
+bottom: -60px;
+
+
+transition: all ease-in-out 0.3s;
+
+justify-content: center;
+color: #fff;
+font-size: 28px;
+
+background: rgba(20, 157, 221, 0.75);
+transition: 0.3s;
+width: 50%;
+*/
