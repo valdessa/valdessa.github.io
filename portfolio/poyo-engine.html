@@ -81,18 +81,30 @@
             <p>
               It is structured around components, utilizing an <strong>Entity Component System (ECS)</strong> and offers various features including:
             </p>
-            <div style="column-count: 2;">
-              <ul>
-                <li><strong>Instancing</strong></li>
-                <li><strong>Deferred Shading</strong></li>
-                <li><strong>Shadows</strong></li>
-                <li><strong>Picking</strong></li>
-                <li><strong>Friendly UI</strong></li>
-                <li><strong>Skeletal Animations</strong></li>
-                <li><strong>PBR Materials</strong></li>
-                <li><strong>Frustum Culling</strong></li>
-              </ul>
+
+            <div style="display: flex; flex-wrap: wrap;">
+              <div style="width: 50%;">
+                <ul>
+                  <li><strong>Friendly UI</strong></li>
+                  <li><strong>Deferred Shading</strong></li>
+                  <li><strong>Frustum Culling</strong></li>
+                  <li><strong>PBR Materials</strong></li>
+                  <li><strong>Skeletal Animations</strong></li>
+                  <li><strong>Logger System</strong></li>
+                </ul>
+              </div>
+              <div style="width: 50%;">
+                <ul>
+                  <li><strong>Gizmo Transform</strong></li>
+                  <li><strong>Shadows</strong></li>
+                  <li><strong>Port To DX11</strong></li>
+                  <li><strong>Picking System</strong></li>
+                  <li><strong>IBL</strong></li>
+                  <li><strong>Undo/Redo System</strong></li>
+                </ul>
+              </div>
             </div>
+            
             
 
             <table class="table-container">
@@ -133,37 +145,67 @@
             <p>
               Currently, <strong>Poyo Engine</strong> has available the following <strong>components</strong>:
             </p>
-            <div style="column-count: 2;">
-              <ul>
-                <li><i><strong>Animator</strong></i></li>
-                <li><i><strong>Audio</strong></i></li>
-                <li><i><strong>Billboard</strong></i></li>
-                <li><i><strong>Camera</strong></i></li>
-                <li><i><strong>Hierarchy</strong></i></li>
-                <li><i><strong>Interface</strong></i></li>
-                <li><i><strong>Light</strong></i></li>
-                <li><i><strong>Static Mesh</strong></i></li>
-                <li><i><strong>Skeletal Mesh</strong></i></li>
-                <li><i><strong>Particle</strong></i></li>
-                <li><i><strong>Render</strong></i></li>
-                <li><i><strong>Text 2D</strong></i></li>
-                <li><i><strong>Text 3D</strong></i></li>
-                <li><i><strong>Transform</strong></i></li>
-              </ul>
+
+            <div style="display: flex; flex-wrap: wrap;">
+              <div style="width: 50%;">
+                <ul>
+                  <li><i><strong>Animator</strong></i></li>
+                  <li><i><strong>Audio</strong></i></li>
+                  <li><i><strong>Billboard</strong></i></li>
+                  <li><i><strong>Camera</strong></i></li>
+                  <li><i><strong>Hierarchy</strong></i></li>
+                  <li><i><strong>Interface</strong></i></li>
+                  <li><i><strong>Light</strong></i></li>
+                </ul>
+              </div>
+              <div style="width: 50%;">
+                <ul>
+                  <li><i><strong>Static Mesh</strong></i></li>
+                  <li><i><strong>Skeletal Mesh</strong></i></li>
+                  <li><i><strong>Particle</strong></i></li>
+                  <li><i><strong>Render</strong></i></li>
+                  <li><i><strong>Text 2D</strong></i></li>
+                  <li><i><strong>Text 3D</strong></i></li>
+                  <li><i><strong>Transform</strong></i></li>
+                </ul>
+              </div>
             </div>
+
             <br>
 
           <h2 style="font-size:20px">What Knowledge Have I Acquired?</h2>
             <p>
-              Bla
-
-              <br><br>
-              
-              Bla
-
-              <br><br>
-
-              Bla
+              This project has provided me with a robust understanding of graphics engine design principles, along with practical skills in programming, 
+              optimization, and resolving challenges specific to game development:
+            </p>
+              <div style="display: flex; flex-wrap: wrap;">
+                <ul>
+                  <li><i><strong>Graphics Engine Design:</strong></i></li>
+                  <p>
+                    Mastering OpenGL and C++ for features such as deferred shading, shadows, frustum culling, PBR materials, emissive materials and IBL.
+                  </p>
+                  <li><i><strong>Skeletal Animations:</strong></i></li>
+                  <p>
+                    In-depth knowledge of character rigging and efficient implementation of animation controllers.
+                  </p>
+                  <li><i><strong>Cross-Platform:</strong></i></li>
+                  <p>
+                    Experience in porting to DX11, providing insights into cross-platform challenges and codebase versatility.
+                  </p>
+                  <li><i><strong>Deferred Shading:</strong></i></li>
+                  <p>
+                    Implementing G-buffer, lighting passes, and post-processing effects for visually stunning and performance-efficient graphics.
+                  </p>
+                  <li><i><strong>User Interface and Interaction:</strong></i></li>
+                  <p>
+                    Designing a user-friendly UI, logger system, gizmo transform, and picking system, enhancing user experience.
+                  </p>
+                  <li><i><strong>Optimization :</strong></i></li>
+                  <p>
+                    A focus on performance involving efficient rendering pipelines, memory management, and algorithmic improvements. 
+                  </p>
+                </ul>
+              </div>
 
           <h2 style="font-size:20px">Code Example</h2>
               <pre class="prettyprint">
@@ -183,11 +225,10 @@
       Input& currentInput = currentWindow.getInput();
   
       while (currentWindow.closeWindow()) {
-          currentWindow.updateTime();             //Updates Delta Time
+          UpdateEngine(currentWindow); //Updates Delta Time & Commands
   
-          if (currentInput.isPressed(Keys::KEY_F11)) {
-              currentWindow.makeFullScreen();     //Makes Full Screen
-          }
+          if (currentInput.isPressed(Keys::KEY_F11))
+              currentWindow.makeFullScreen();     //Makes Full Screen    
   
           //Finally, call the render function
           currentWindow.render();
@@ -195,24 +236,10 @@
       return 0;
   }
               </pre>
-
-              Bla
-
-              <br/><br/>
-              
-              Bla
-
-              <br/><br/>
-
-              Bla
-
-              <br/>
-            </p>
           <h2 style="font-size:20px">Upcoming Enhancements</h2>
             <p>
-              Physics 
-	            <br/><br/>
-              Porting
+              In the pipeline for PoyoEngine is the integration of a robust <b>Physics Engine</b>. This enhancement aims to elevate the engine's 
+              capabilities by introducing realistic physics simulations, enabling dynamic object interactions and immersive gameplay experiences.
             </p>
         </div>
       </div>
