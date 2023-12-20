@@ -55,13 +55,13 @@
           </div> -->
           <div class="iframe-container">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/liKGjLeVMfQ?si=Bz7INN5i7yL-VvlN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div><br/><br/>
+          </div>
 
           <div class="portfolio-info">
             <h3>Project Information</h3>
             <ul>
-              <li><strong>Languaje</strong>: C++</li>
               <li><strong>Category</strong>: Graphic Programming</li>
+              <li><strong>Languaje</strong>: C++</li>
               <li><strong>Graphic API</strong>: OpenGL & DirectX11</li>
               <li><strong>Project Date</strong>: 02 June 2023</li>
               <li><strong>Made by</strong>: Sebastián Valdés</li>
@@ -224,7 +224,7 @@
       //2º Declare an Input variable
       Input& currentInput = currentWindow.getInput();
   
-      while (currentWindow.closeWindow()) {
+      while (!currentWindow.shouldClose()) {
           UpdateEngine(currentWindow); //Updates Delta Time & Commands
   
           if (currentInput.isPressed(Keys::KEY_F11))
