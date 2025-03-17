@@ -1510,3 +1510,68 @@ section {
   font-size: 13px;
   color: #ccc;
 }
+
+/*--------------------------------------------------------------
+# Cards
+--------------------------------------------------------------*/
+.optimization-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 elementos por fila en pantallas grandes */
+  gap: 10px;
+  padding: 10px;
+}
+
+.optimization-card {
+  background-color: #f4f4f9;
+  padding: 5px;
+  border-radius: 8px;
+  width: 200px; /* Width of each card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  margin-bottom: 10px; /* Adds space between cards */
+}
+
+.optimization-card i {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.optimization-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.optimization-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.optimization-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .optimization-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 elementos por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .optimization-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 elementos por fila en pantallas pequeñas */
+  }
+  .optimization-card {
+    width: 100%; /* Makes the cards take full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .optimization-container {
+    grid-template-columns: 1fr; /* 1 elemento por fila en móviles */
+  }
+}

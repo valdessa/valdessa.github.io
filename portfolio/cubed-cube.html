@@ -103,59 +103,6 @@
             To achieve a smooth 60 FPS while rendering as many chunks as possible, I focused on both <strong>performance</strong> and <strong>memory efficiency</strong> with these key optimizations:
           </p>
 
-          <style>
-            .optimization-container {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr); /* 4 elementos por fila en pantallas grandes */
-              gap: 10px;
-              padding: 10px;
-            }
-
-            .optimization-card {
-              background: #1e1e1e; /* Fondo oscuro elegante */
-              color: #fff; /* Texto blanco */
-              border-radius: 10px;
-              padding: 10px;
-              text-align: center;
-              box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-            }
-
-            .optimization-card i {
-              font-size: 20px; /* Iconos más pequeños */
-              display: block;
-              margin-bottom: 8px;
-            }
-
-            .optimization-card h3 {
-              font-size: 16px; /* Tamaño del título reducido */
-              margin: 8px 0;
-            }
-
-            .optimization-card p {
-              font-size: 12px; /* Texto más pequeño */
-              opacity: 0.8;
-            }
-
-            /* Para pantallas más pequeñas */
-            @media (max-width: 1200px) {
-              .optimization-container {
-                grid-template-columns: repeat(3, 1fr); /* 3 elementos por fila en pantallas medianas */
-              }
-            }
-
-            @media (max-width: 768px) {
-              .optimization-container {
-                grid-template-columns: repeat(2, 1fr); /* 2 elementos por fila en pantallas pequeñas */
-              }
-            }
-
-            @media (max-width: 480px) {
-              .optimization-container {
-                grid-template-columns: 1fr; /* 1 elemento por fila en móviles */
-              }
-            }
-          </style>
-
           <div class="optimization-container">
             <div class="optimization-card">
               <i>🗃️</i>
