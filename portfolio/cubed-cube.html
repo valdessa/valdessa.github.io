@@ -49,20 +49,19 @@
         <div class="portfolio-details-container">
 
           <div style="width: 100%; display: flex; justify-content: center;">
-            <img src="../assets/img/portfolio/CubedCube.webp" class="img-fluid" alt="" style="width: 50%; max-width: 100%;"/>
+            <img src="../assets/img/portfolio/CubedCube.webp" class="img-fluid custom-img" alt="" style="width: 50%; max-width: 100%;"/>
           </div>
 
           <style>
             @media (max-width: 768px) {
-              /* Para pantallas pequeñas (móviles), la imagen ocupa el 100% del ancho */
-              img {
+              /* Solo afecta a la imagen con la clase "custom-img" */
+              .custom-img {
                 width: 100% !important;
               }
             }
 
             @media (min-width: 769px) {
-              /* Para pantallas grandes (PC), la imagen ocupa el 50% del ancho */
-              img {
+              .custom-img {
                 width: 50% !important;
               }
             }
@@ -103,40 +102,161 @@
           <p>
             To achieve a smooth 60 FPS while rendering as many chunks as possible, I focused on both <strong>performance</strong> and <strong>memory efficiency</strong> with these key optimizations:
           </p>
-          <div style="display: flex; flex-wrap: wrap;">
-            <ul>
-              <li><i><strong>Batching:</strong></i></li>
-              <p>
-                Reduced CPU overhead by combining multiple draw calls into one.
-              </p>
-              <li><i><strong>Occlusion Culling:</strong></i></li>
-              <p>
-                First culled entire cubes, then refined it to cull individual cube faces, saving more processing power by not rendering hidden faces.
-              </p>
-              <li><i><strong>Memory Optimization with Bitfields:</strong></i></li>
-              <p>
-                Used bitfields in structs to pack data efficiently, allowing more chunks to fit in memory without crashes.
-              </p>
-              <li><i><strong>Display Lists:</strong></i></li>
-              <p>
-                Pre-recorded draw commands in display lists to reduce draw calls and improve FPS, at the cost of some memory usage.
-              </p>
-              <li><i><strong>Frustum Culling:</strong></i></li>
-              <p>
-                Rendered only chunks within the camera’s view, further optimizing performance.
-              </p>
-              <li><i><strong>Dynamic Chunk Management:</strong></i></li>
-              <p>
-                Loaded and unloaded chunks dynamically around the camera, reducing memory use and improving load times.
-              </p>
-              <li><i><strong>Efficient Terrain Generation:</strong></i></li>
-              <p>
-                Optimized terrain generation to minimize redundant calculations and improve performance.
-              </p>
-            </ul>
+
+          <style>
+            .optimization-container {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr); /* 4 elementos por fila en pantallas grandes */
+              gap: 10px;
+              padding: 10px;
+            }
+
+            .optimization-card {
+              background: #1e1e1e; /* Fondo oscuro elegante */
+              color: #fff; /* Texto blanco */
+              border-radius: 10px;
+              padding: 10px;
+              text-align: center;
+              box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            .optimization-card i {
+              font-size: 20px; /* Iconos más pequeños */
+              display: block;
+              margin-bottom: 8px;
+            }
+
+            .optimization-card h3 {
+              font-size: 16px; /* Tamaño del título reducido */
+              margin: 8px 0;
+            }
+
+            .optimization-card p {
+              font-size: 12px; /* Texto más pequeño */
+              opacity: 0.8;
+            }
+
+            /* Para pantallas más pequeñas */
+            @media (max-width: 1200px) {
+              .optimization-container {
+                grid-template-columns: repeat(3, 1fr); /* 3 elementos por fila en pantallas medianas */
+              }
+            }
+
+            @media (max-width: 768px) {
+              .optimization-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 elementos por fila en pantallas pequeñas */
+              }
+            }
+
+            @media (max-width: 480px) {
+              .optimization-container {
+                grid-template-columns: 1fr; /* 1 elemento por fila en móviles */
+              }
+            }
+          </style>
+
+          <div class="optimization-container">
+            <div class="optimization-card">
+              <i>🗃️</i>
+              <h3>Batching</h3>
+              <p>Reduced CPU overhead by combining multiple draw calls into one.</p>
+            </div>
+
+            <div class="optimization-card">
+              <i>👀</i>
+              <h3>Occlusion Culling</h3>
+              <p>First culled entire cubes, then refined it to cull individual faces, improving performance.</p>
+            </div>
+
+            <div class="optimization-card">
+              <i>💾</i>
+              <h3>Memory Optimization</h3>
+              <p>Used bitfields in structs to pack data efficiently, allowing more chunks to fit in memory.</p>
+            </div>
+
+            <div class="optimization-card">
+              <i>📜</i>
+              <h3>Display Lists</h3>
+              <p>Pre-recorded draw commands to reduce calls and improve FPS, at the cost of memory.</p>
+            </div>
+
+            <div class="optimization-card">
+              <i>🎥</i>
+              <h3>Frustum Culling</h3>
+              <p>Rendered only chunks within the camera’s view, optimizing performance.</p>
+            </div>
+
+            <div class="optimization-card">
+              <i>📦</i>
+              <h3>Dynamic Chunk Management</h3>
+              <p>Loaded and unloaded chunks dynamically, reducing memory use and improving load times.</p>
+            </div>
+
+            <div class="optimization-card">
+              <i>🌍</i>
+              <h3>Efficient Terrain Generation</h3>
+              <p>Optimized terrain generation to minimize redundant calculations and improve speed.</p>
+            </div>
+
+            <div class="optimization-card">
+              <i>🎬</i>
+              <h3>Efficient Animations</h3>
+              <p>Optimised water movement and bone animations.</p>
+            </div>
           </div>
 
 
+
+          <table class="table-container">
+            <tr>
+              <td>
+                <div style="text-align: center;"><p><b>Distance from Camera</b></p></div>
+                <img src="../assets/img/portfolio/CubedCube/Distance_20.webp" alt="" class="img-fluid" loading="lazy" width="640" height="480">
+              </td>
+              <td>
+                <div style="text-align: center;"><p><b>Frustum Culling</b></p></div>
+                <img src="../assets/img/portfolio/CubedCube/Frustum_20.webp" alt="" class="img-fluid" loading="lazy" width="640" height="480">
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <h2 style="font-size:20px">Stages of Optimisation</h2>
+          <div class="work-img" style="width: 50%; display: flex; justify-content: center; align-items: center;">
+            <img src="../assets/img/portfolio/CubedCube/Stages.webp" alt="" class="img-fluid" loading="lazy" width="2340" height="2056">
+          </div>
+          <br>
+          
+          <table class="table-container">
+            <tr>
+              <td>
+                <div style="text-align: center;"><p><b>Stage 0: No Optimisations</b></p></div>
+                <img src="../assets/img/portfolio/CubedCube/CC_Portfolio0.1_24.webp" alt="" class="img-fluid" loading="lazy" width="640" height="480">
+                <div style="text-align: center;">
+                  <p>
+                    FPS:         <b style="color: #e10000;">15</b><br>
+                    N° Chunks:   <b style="color: #e10000;">9</b> <br>
+                    Draw Calls:  <b style="color: #e10000;">20488</b> <br>
+                    Free Memory: <b style="color: #00e100;">17.785 KB</b>
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div style="text-align: center;"><p><b>Stage 10: All Optimisations</b></p></div>
+                <img src="../assets/img/portfolio/CubedCube/CC_Portfolio10.3_24.webp" alt="" class="img-fluid" loading="lazy" width="640" height="480">
+                <div style="text-align: center;">
+                  <p>
+                    FPS:         <b style="color: #00e100;">60</b>  <br>
+                    N° Chunks:   <b style="color: #00e100;">289</b> <br>
+                    Draw Calls:  <b style="color: #00e100;">~100</b> <br>
+                    Free Memory: <b style="color: #e10000;">2.663 KB</b>
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <br>
 
           <h2 style="font-size:20px">What Knowledge Have I Acquired?</h2>
           <p>
