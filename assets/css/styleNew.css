@@ -1515,31 +1515,39 @@ section {
 # Cards
 --------------------------------------------------------------*/
 .optimization-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 elementos por fila en pantallas grandes */
-  gap: 10px;
-  padding: 10px;
+  /*display: grid;*/
+  /*grid-template-columns: repeat(4, 1fr); !* 4 elementos por fila en pantallas grandes *!*/
+  /*gap: 10px;*/
+  /*padding: 10px;*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .optimization-card {
   background-color: #f4f4f9;
   padding: 5px;
   border-radius: 8px;
-  width: 200px; /* Width of each card */
+  width: 150px; /* Width of each card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   text-align: center;
   margin-bottom: 10px; /* Adds space between cards */
 }
 
-.optimization-card i {
-  font-size: 30px;
+.optimisation-card-big{
+  width: 200px; /* Width of each card */
+} 
+
+.optimization-card b {
+  font-size: 20px;
   display: block;
   margin-bottom: 10px;
 }
 
 .optimization-card h3 {
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 10px;
   color: #333;
 }
@@ -1566,7 +1574,7 @@ section {
     grid-template-columns: repeat(2, 1fr); /* 2 elementos por fila en pantallas pequeñas */
   }
   .optimization-card {
-    width: 100%; /* Makes the cards take full width on smaller screens */
+    /*width: 100%; !* Makes the cards take full width on smaller screens *!*/
   }
 }
 

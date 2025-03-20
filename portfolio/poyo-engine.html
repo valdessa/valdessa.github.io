@@ -79,79 +79,66 @@
               Poyo Engine is a custom-built video game engine crafted entirely using <strong>C++</strong> and <strong>OpenGL</strong>.
             </p>
             <p>
-              It is structured around components, utilizing an <strong>Entity Component System (ECS)</strong> and offers various features including:
+              It is structured around components, utilising an <strong>Entity Component System (ECS)</strong> and offers various features including:
             </p>
 
           <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
             <div class="optimization-card">
-              <i>🖥️</i>
-              <h3>Friendly UI</h3>
-              <p>A user-friendly interface for smooth interaction with the engine.</p>
+              <b>🖥️🔄🖱️</b>
+              <h3>Editor Mode</h3>
+              <p>
+                Provides tools like <strong>Undo/Redo</strong> and <strong>Object Selection</strong> with the mouse.
+              </p>
             </div>
             <div class="optimization-card">
-              <i>🌑</i>
+              <b>🔑</b>
+              <h3>Direct State Access (DSA)</h3>
+              <p>Modifying OpenGL objects without binding them first.</p>
+            </div>
+            <div class="optimization-card">
+              <b>🌓</b>
               <h3>Deferred Shading</h3>
-              <p>Enables high-quality lighting and shadow effects.</p>
+              <p>Boosts performance by separating geometry and light passes.</p>
             </div>
             <div class="optimization-card">
-              <i>🔪</i>
+              <b>🔲👀</b>
               <h3>Frustum Culling</h3>
-              <p>Improves performance by rendering only what's in the camera’s view.</p>
+              <p>Boosts  performance by rendering only what's in the camera’s view.</p>
             </div>
             <div class="optimization-card">
-              <i>💎</i>
+              <b>🪞✨</b>
               <h3>PBR Materials</h3>
-              <p>Realistic rendering with physically based materials.</p>
+              <p>Simulate realistic lighting and surface interactions for lifelike visuals.</p>
             </div>
             <div class="optimization-card">
-              <i>🎭</i>
+              <b>🎬🏃💀</b>
               <h3>Skeletal Animations</h3>
               <p>Allows smooth character animations with skeletal rigs.</p>
             </div>
             <div class="optimization-card">
-              <i>📜</i>
+              <b>📜📊 </b>
               <h3>Logger System</h3>
               <p>A robust logging system for tracking engine processes and errors.</p>
             </div>
             <div class="optimization-card">
-              <i>🔧</i>
-              <h3>Multi Draw Indirect (MDI)</h3>
-              <p>Optimizes performance by reducing CPU overhead in rendering.</p>
+              <b>🔁🎨 </b>
+              <h3>Multi Draw Indirect</h3>
+              <p>Executes multiple draw commands in a single draw call.</p>
             </div>
             <div class="optimization-card">
-              <i>🔄</i>
+              <b>🛠️🔄📐</b>
               <h3>Gizmo Transform</h3>
-              <p>Tool to manipulate objects and cameras in 3D space.</p>
+              <p>Manipulate objects by rotating, translating, and scaling.</p>
             </div>
             <div class="optimization-card">
-              <i>🌑</i>
+              <b>🌓💡</b>
               <h3>Shadows</h3>
-              <p>Real-time shadows for realistic lighting effects in the scene.</p>
+              <p>Supports shadow maps for directional, spot, and point lights for realistic lighting.</p>
             </div>
             <div class="optimization-card">
-              <i>⚙️</i>
-              <h3>Port To DX11</h3>
-              <p>Porting to DirectX 11 for better cross-platform compatibility.</p>
-            </div>
-            <div class="optimization-card">
-              <i>🎮</i>
-              <h3>Picking System</h3>
-              <p>Allows object selection via mouse or input devices.</p>
-            </div>
-            <div class="optimization-card">
-              <i>🌍</i>
-              <h3>IBL</h3>
-              <p>Image-Based Lighting for enhanced environmental reflections.</p>
-            </div>
-            <div class="optimization-card">
-              <i>🔄</i>
-              <h3>Undo/Redo System</h3>
-              <p>Undo and redo actions for better development workflow.</p>
-            </div>
-            <div class="optimization-card">
-              <i>🔑</i>
-              <h3>Direct Access State (DSA)</h3>
-              <p>Direct access to engine state for advanced performance tweaks.</p>
+              <b>⚙️</b>
+              <h3>Port To DX 11</h3>
+              <p>Porting to DirectX 11 for better cross-platform compatibility like Xbox One.</p>
             </div>
           </div>
           <br>
@@ -250,11 +237,11 @@
 
           <h2 style="font-size:20px">Entity Component System (ECS)</h2>
             <p>
-              The engine's architecture employs entities and components, utilizing the Entity Component System (ECS) to streamline the utilization of diverse engine elements. 
+              The engine's architecture employs entities and components, utilising the Entity Component System (ECS) to streamline the utilisation of diverse engine elements. 
               This approach distributes functionalities such as rendering, camera control, lighting, and transformation across distinct classes that collectively form an entity.
             </p>
             <p>
-              The system revolves around entities and components, with entities serving as containers for components, offering identification and organization for these constituent parts.
+              The system revolves around entities and components, with entities serving as containers for components, offering identification and organisation for these constituent parts.
             </p>
             <p>
               Currently, <strong>Poyo Engine</strong> has available the following <strong>components</strong>:
@@ -290,7 +277,7 @@
           <h2 style="font-size:20px">What Knowledge Have I Acquired?</h2>
             <p>
               This project has provided me with a robust understanding of graphics engine design principles, along with practical skills in programming, 
-              optimization, and resolving challenges specific to game development:
+              optimisation, and resolving challenges specific to game development:
             </p>
               <div style="display: flex; flex-wrap: wrap;">
                 <ul>
@@ -314,7 +301,7 @@
                   <p>
                     Designing a user-friendly UI, logger system, gizmo transform, and picking system, enhancing user experience.
                   </p>
-                  <li><i><strong>Optimization :</strong></i></li>
+                  <li><i><strong>Optimisation :</strong></i></li>
                   <p>
                     A focus on performance involving efficient rendering pipelines, memory management, and algorithmic improvements. 
                   </p>
