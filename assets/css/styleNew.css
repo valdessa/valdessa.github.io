@@ -1582,4 +1582,7 @@ section {
   .optimization-container {
     grid-template-columns: 1fr; /* 1 elemento por fila en móviles */
   }
+  .optimisation-card-big{
+    width: 150px; /* Width of each card */
+  }
 }
