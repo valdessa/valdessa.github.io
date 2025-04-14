@@ -49,7 +49,10 @@
         <div class="portfolio-details-container">
           
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="../assets/img/portfolio/PikminLike/PikminIntroNew_720_15.webp" class="img-fluid" alt="" width="50%">
+              <picture>
+                  <source srcset="../assets/img/portfolio/PikminLike/PikminIntroNew_1280_15.webp" media="(min-width: 768px)">
+                  <img src="../assets/img/portfolio/PikminLike/PikminIntroNew_720_15.webp" class="img-fluid" alt="">
+              </picture>
           </div>
           
           <!-- <div class="iframe-container">
@@ -74,26 +77,37 @@
 
         <div class="portfolio-description">
           <h2>Pikmin-Like Game</h2>
-          <h2 style="font-size:20px">PAGE ON DEVELOPMENT!!</h2>
-            <p>
-<!--              Phazon Engine is my first graphics engine for PlayStation 5, developed during my final year of university.-->
-            </p>
-            <p>
-<!--              It is structured around components, utilizing an <strong>Entity Component System (ECS)</strong> and offers various features including:-->
-            </p>
+            <h2 style="font-size:20px; color:red; text-align:center;">PAGE ON DEVELOPMENT!!</h2>
 
-          <div class = "optimization-container">
-            <div class="optimization-card optimisation-card-big">
-              <b>🎬🏃💀</b>
-              <h3>Skeletal Animations</h3>
-              <p>Allows smooth character animations with skeletal rigs.</p>
+            <h2 style="font-size:20px">Features</h2>
+
+            <div class = "optimization-container">
+                <div class="optimization-card optimisation-card-big">
+                    <b>🎮👫</b>
+                    <h3>Local Multiplayer</h3>
+                    <p>Supports <strong>local multiplayer</strong> with shared screen and <strong>cooperative gameplay</strong>.</p>
+                </div>
+                <div class="optimization-card optimisation-card-big">
+                    <b>🎬🏃💀</b>
+                    <h3>Skeletal Animations</h3>
+                    <p>Allows smooth character animations with skeletal rigs.</p>
+                </div>
+                <div class="optimization-card optimisation-card-big">
+                    <b>🌓💡</b>
+                    <h3>Shadows</h3>
+                    <p>Supports shadow maps for <strong>directional</strong>, <strong>spot</strong>, and <strong>point lights</strong> for realistic lighting.</p>
+                </div>
+                    <div class="optimization-card optimisation-card-big">
+                    <b>🪞✨</b>
+                    <h3>PBR Materials</h3>
+                    <p>Simulate <strong>realistic</strong> lighting and surface interactions for lifelike visuals.</p>
+                </div>
+                    <div class="optimization-card optimisation-card-big">
+                    <b>💨🌱👣</b>
+                    <h3>Interactive Grass</h3>
+                    <p>Responsive grass reacting to <strong>wind</strong> and <strong>player movement</strong>.</p>
+                </div>
             </div>
-            <div class="optimization-card optimisation-card-big">
-              <b>💨🌱👣</b>
-              <h3>Interactive Grass</h3>
-              <p>Responsive grass reacting to <strong>wind</strong> and <strong>player movement</strong>.</p>
-            </div>
-          </div>
           
           <br>
           <h2 style="font-size:20px">My Rol in this Project</h2>
@@ -102,12 +116,27 @@
             <div class="optimization-card optimisation-card-big">
               <b>🎬🏃</b>
               <h3>Animations</h3>
-              <p>Implemented <strong>all in-game animations</strong>, including <strong>blending</strong> and <strong>event triggers</strong>.</p>
+                <p>Implemented <strong>all in-game animations</strong>, including <strong>blending</strong>, <strong>event triggers</strong>, and <strong>developed</strong> their respective systems.</p>
             </div>
             <div class="optimization-card optimisation-card-big">
-              <b>🌱👣</b>
-              <h3>Grass</h3>
-              <p>Developed an interactive grass system, footsteps are generated using a <strong>compute shader</strong>. </p>
+                <b>🌱👣</b>
+                <h3>Grass</h3>
+                <p><strong>Designed</strong> and <strong>developed</strong> an interactive grass system, reacting to <strong>wind</strong> and generating <strong>footsteps</strong> with a <strong>compute shader</strong>.</p>
+            </div>
+            <div class="optimization-card optimisation-card-big">
+                <b>🗂️📦</b>
+                <h3>Resource System</h3>
+                <p><strong>Built</strong> a system to manage <strong>static-skeletal meshes</strong>, <strong>animations</strong>, <strong>textures</strong>, and <strong>audio</strong>.</p>
+            </div>
+            <div class="optimization-card optimisation-card-big">
+              <b>🖥️🔗</b>
+              <h3>Event System</h3>
+              <p><strong>Built</strong> an event system using <strong>delegates</strong> and <strong>multi-delegates</strong> to handle interactions and triggers.</p>
+            </div>
+            <div class="optimization-card optimisation-card-big">
+              <b>🖋️📏</b>
+              <h3>Rendering Systems</h3>
+              <p><strong>Built</strong> systems for rendering <strong>lines</strong> (e.g., for visualising <strong>bounding boxes</strong>), <strong>3D text</strong> in world space, and <strong>2D text</strong> for UI elements.</p>
             </div>
           </div>
           
@@ -127,6 +156,38 @@
           <br>
           
           <br>
+            
+          <h2 style="font-size:20px">Credits</h2>
+
+            <div class="optimization-container">
+                <div class="optimization-card optimisation-card-big">
+                    <b>💻🛠️</b>
+                    <h3>Programming</h3>
+                    Engine, gameplay and systems development by:
+                    <ul style="text-align: left; padding-top: 1em;">
+                        <li><a href="https://linkedin.com/in/xema-maestre-quiles-223211202" target="_blank"><strong>Xema Maestre</strong></a></li>
+                        <li><a href="https://linkedin.com/in/hector-ochando" target="_blank"><strong>Héctor Ochando</strong></a></li>
+                        <li><a href="https://linkedin.com/in/sebas-valdes" target="_blank"><strong>Sebastián Valdés</strong></a></li>
+                        <li><a href="https://linkedin.com/in/joel-vinaroz-giménez-474b3a2b8" target="_blank"><strong>Joel Vinaroz</strong></a></li>
+                    </ul>
+                </div>
+                <div class="optimization-card optimisation-card-big">
+                    <b>🎨🖌️🧵</b>
+                    <h3>Art</h3>
+                    Textures, models and animations by:
+                    <ul style="text-align: left; padding-top: 1em;">
+                        <li><a href="https://linkedin.com/in/cristina-mart%C3%ADnez-gracia-622b982b7" target="_blank"><strong>Cristina Martínez</strong></a></li>
+                    </ul>
+                </div>
+                <div class="optimization-card optimisation-card-big">
+                    <b>🧭🕹️📐</b>
+                    <h3>Design</h3>
+                    Gameplay ideas, and level design by:
+                    <ul style="text-align: left; padding-top: 1em;">
+                        <li><a href="https://linkedin.com/in/ash-sandhar-7b3383244" target="_blank"><strong>Ash</strong></a></li>
+                    </ul>
+                </div>
+            </div>
           
         </div>
       </div>
