@@ -307,7 +307,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0; /*Sebas, OG: 60*/
   overflow: hidden;
 }
 
@@ -535,7 +535,7 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+  margin-bottom: 0rem; /*Pat, OG: 30px*/
 }
 
 .portfolio #portfolio-flters {
@@ -1195,10 +1195,19 @@ width: 50%;
 */
 
 .work-box {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem; /*Pat, OG: 3rem*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  display: flex; /*Pat, OG: -*/
+  flex-direction: column; /*Pat, OG: -*/
+}
+
+@media (min-width: 992px) { /*Pat, OG: -*/
+  /* This is for desktop */
+  .work-box {
+    min-height: 400px;
+  }
 }
 
 .work-box:hover img {
@@ -1215,12 +1224,27 @@ width: 50%;
 }
 
 .work-content {
-  padding: 2rem 3% 1rem 4%;
+  padding: 1rem 3% 0.5rem 4%;   /*OG: 2rem 3% 1rem 4% Sebas*/
+  flex-grow: 1;  /*Pat, OG: -*/
+  display: flex; /*Pat, OG: -*/
+  flex-direction: column; /*Pat, OG: -*/
 }
 
 .work-content .w-more {
   color: #4e4e4e;
   font-size: 0.8rem;
+}
+
+.work-content .row { /*Pat, OG: -*/
+  flex-grow: 1 !important;
+}
+.work-content .row div:first-child { /*Pat, OG: -*/
+  display: flex; 
+  flex-direction: column;
+}
+
+.w-more {
+  flex-grow: 1;
 }
 
 .work-content .w-more .w-ctegory {
@@ -1242,9 +1266,10 @@ width: 50%;
 }
 
 .w-title {
-  font-size: 1.2rem;
+  font-size: 1rem; /*OG 1.2 Sebas*/
   font-weight: bold;
 }
+
 
 
 
