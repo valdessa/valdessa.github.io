@@ -1495,6 +1495,34 @@ section {
   }
 }
 
+/*Guarrada historica en cubed cube:*/
+.table-container-for3 {
+  border: 2px solid #aaa;
+}
+
+.table-container-for3 td {
+  border: 2px solid #aaa;
+  border-collapse: collapse;
+}
+
+.table-container-for3 td p {
+  margin-bottom: 0px;
+  font-style: italic;
+}
+
+@media (min-width: 992px) {
+  .table-container-for3 td {
+    width: 33%;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-container-for3 td {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

@@ -183,10 +183,10 @@
                 <ul>
                   <li> Stage 0: <strong>No Optimisations </strong></li>
                   <li> Stage 1: <strong>Batching </strong></li>
-                  <li> Stage 2: <strong>Occlusion Culling Level 1 </strong></li>
-                  <li> Stage 3: <strong>Occlusion Culling Level 2 </strong></li>
-                  <li> Stage 4: <strong>Occlusion Culling Level 3 </strong></li>
-                  <li> Stage 5: <strong>Occlusion Culling Level 4 </strong></li>
+                  <li> Stage 2: <strong>Occlusion Culling Level 1 (On Blocks - Game Loop)</strong></li>
+                  <li> Stage 3: <strong>Occlusion Culling Level 2 (On Faces  - Game loop)</strong></li>
+                  <li> Stage 4: <strong>Occlusion Culling Level 3 (On Blocks - Precalculated)</strong></li>
+                  <li> Stage 5: <strong>Occlusion Culling Level 4 (On Faces  - Precalculated)</strong></li>
                   <li> Stage 6: <strong>Structs Level 1 </strong></li>
                   <li> Stage 7: <strong>Display List </strong></li>
                   <li> Stage 8: <strong>Structs Level 2 </strong></li>
@@ -242,6 +242,53 @@
               <li><i><strong>Optimisation:</strong></i></li>
               <p>
                 Mastered techniques like batching, frustum culling, and memory optimisations using bitfields to improve performance and memory usage, especially on constrained hardware like the GameCube.
+              <table class="table-container-for3">
+                <tr>
+                  <td>
+                    <center><p><b>Struct Cubito (Initial Version)</b></p></center>
+                    <img src="../assets/img/portfolio/CubedCube/structs0.webp" alt="" class="img-fluid" loading="lazy" width="640" height="480">
+                    <div style="text-align: center;">
+                      <p>
+                        Struct CubeFace: <b style="color: #e10000;">5 bytes</b>  <br>
+                        Struct Cubito:   <b style="color: #e10000;">38 bytes</b> <br>
+                      </p>
+                      <hr style="width: 90%; border: 0; height: 1px; background-color: #ccc; margin: 5px auto;">
+                      <p style="color: gray; font-style: italic;">
+                        Baseline version: no memory optimisation applied.
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <center><p><b>Structs Level 1 </b></p></center>
+                    <img src="../assets/img/portfolio/CubedCube/structs1.webp" alt="" class="img-fluid" loading="lazy" width="640" height="480">
+                    <div style="text-align: center;">
+                      <p>
+                        Struct CubeFace: <b style="color: #ffaf05;">2 bytes</b>  <br>
+                        Struct Cubito:   <b style="color: #ffaf05;">16 bytes</b> <br>
+                      </p>
+                      <hr style="width: 90%; border: 0; height: 1px; background-color: #ccc; margin: 5px auto;">
+                      <p style="color: gray; font-style: italic;">
+                        Memory usage reduced by <b>57.89%</b> in Cubito and <b>60%</b> in CubeFace.
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <center><p><b>Structs Level 2 </b></p></center>
+                    <img src="../assets/img/portfolio/CubedCube/structs1.webp" alt="" class="img-fluid" loading="lazy" width="640" height="480">
+                    <div style="text-align: center;">
+                      <p>
+                        Struct CubeFace: <b style="color: #00e100;">1 byte</b>  <br>
+                        Struct Cubito:   <b style="color: #00e100;">10 bytes</b> <br>
+                      </p>
+                      <hr style="width: 90%; border: 0; height: 1px; background-color: #ccc; margin: 5px auto;">
+
+                      <p style="color: gray; font-style: italic;">
+                        Maximum optimisation: <b>73.68%</b> reduction in Cubito and <b>80%</b> in CubeFace!
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
               </p>
               <li><i><strong>Low-Level Game Development:</strong></i></li>
               <p>
